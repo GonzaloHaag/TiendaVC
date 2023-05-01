@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+:root{
+    /*Colores logo*/
+    --pinkOscuro : #DB0E81;
+    --pinkClaro : #B42F8A;
+    --verdeOscuro : #016C66;
+    --verdeClaro : #009488;
+}
 *{
     margin:0;
     padding: 0;
@@ -14,22 +21,19 @@
 .logo img{
     width: 4em;
 }
-.cart{
-    margin-right: 2rem;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    border-radius: 2rem;
-    width: 5em;
-    border: 1px solid black;
-}
-.cart i{
-    font-size: 25px;
+.button-wsp i{
+    color: #29A71A;
     cursor: pointer;
-    
+    margin-right: 2rem;
+    font-size: 25px;
+    border: 2px solid var(--verdeOscuro);
+    border-radius: 100%;
+    padding: 0.2em 0.5em;
+    transition: 0.5s;
 }
-.cart-number{
-   font-weight: 800;
+.button-wsp i:hover{
+    background-color: var(--verdeOscuro);
+    color: #fff;
 }
 .bordado-container{
     background-image: url("./images/bordado.jpg");
@@ -49,6 +53,7 @@
     text-align: center;
     font-weight: 800;
     letter-spacing: 3px;
+    color : #B0348C;
 }
 .productos-container{
     padding-left: 5rem;
@@ -69,9 +74,17 @@
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
    
+   
 
 }
-
+.nav-tabs .nav-item a{
+    text-decoration: none;
+    color: black;
+}
+.nav-tabs .nav-item a.active{
+    text-decoration: none;
+    color: var(--pinkOscuro);
+}
 .product-card{
     /* width:20%;
     background:#ffffff;
@@ -81,6 +94,8 @@
     background-color: #ffffff;
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
     position: relative;
+
+   
 
   }
   
@@ -98,7 +113,7 @@
   
   .product-card .info-product{
     padding:0px 25px;
-    /* position: relative; */
+     position: relative;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -111,6 +126,9 @@
       font-weight:600;
       color:#131313;
       margin-top: 0.5rem;
+      position: absolute; /*Esto para que cuando la descripcion de otra card sea mas larga, no se me baje el titulo*/
+      top: 0;
+     
   }
   .product-card .info-product .description{
       font-size:15px;
@@ -118,34 +136,108 @@
       margin-bottom: 15px;
       color:#414141;
       
+      margin-top: 4em;
+     
+      
       
     
   }
-  .product-card .info-product .price{
-      background:#FFC069;
-      padding:8px 10px;
-      border-radius:30px;
-      font-weight:600;
-      font-size:14px;
-      width: 8em;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-  }
+ .verMas{
+    border: none;
+    font-size: 12px;
+ }
+ .hide{
+    display: none;
+ }
+ .show{
+    display: block;
+ }
   
   .btn-cart{
    
-    background:#131313;
+    background-image: linear-gradient(var(--verdeOscuro),var(--verdeClaro));
     color:#ffffff;
     padding:10px 0px;
-    margin-top:3px;
+    margin-top:0.5em;
     text-decoration:none;
     display:flex;
     justify-content: center;
     align-items: center;
     gap:10px;
+    transition: 0.2s;
+
    
 }
 .btn-cart:hover{
-    color:#807878;
+    color: black;
+}
+
+/**COMIENZO FOOTER*/
+
+footer{
+    margin-top: 3rem;
+    background-image: linear-gradient(var(--pinkOscuro),var(--pinkClaro));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-logo-container a img{
+    width: 6em;
+}
+.footer-redes-container{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    margin-top: 0.5em;
+    flex-wrap: wrap;
+}
+.footer-redes-container i{
+    border: 2px solid #fff;
+    padding: 0.3em 0.5em;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.footer-sections ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+    margin-top: 2em;
+    flex-wrap: wrap;
+
+}
+.footer-sections ul li a,.footer-sections ul li{
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer-company p{
+    letter-spacing: 2px;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+
+@media screen and (max-width:1050px) {
+    .todosLosProductos{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:800px) {
+    .productos-container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .todosLosProductos{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:400px) {
+    .productos-container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .todosLosProductos{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
