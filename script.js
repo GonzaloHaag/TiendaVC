@@ -1,75 +1,23 @@
-let arrayProductos = [
-    {
-        id:1,
-        titulo:"Remera Sublimada",
-        imagen:"./images/remera-1.jpg",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
-        categoria: {
-            id:"remeras", //Esto es para poder filtrar por categoria , con .categoria.id
-        }
-        
-    },
-    {
-        id:2,
-        titulo:"Remera Sublimada",
-        imagen:"./images/remera-2.jpg",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
-        categoria: {
-            id:"remeras", //Esto es para poder filtrar por categoria , con .categoria.id
-        }
-    },
-    {
-        id:3,
-        titulo:"Chomba Pique personalizada",
-        imagen:"./images/chomba-1.jpg",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
-        categoria: {
-            id:"chombas", //Esto es para poder filtrar por categoria , con .categoria.id
-        }
-    },
-    {
-        id:4,
-        titulo:"Chomba Pique personalizada",
-        imagen:"./images/chomba-2.jpg",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
-        categoria: {
-            id:"chombas", //Esto es para poder filtrar por categoria , con .categoria.id
-        }
-    },
-    {
-        id:5,
-        titulo:"Chombas Pique personalizadas",
-        imagen:"./images/chomba-3.jpg",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
-        categoria: {
-            id:"chombas", //Esto es para poder filtrar por categoria , con .categoria.id
-        }
-    },
-    {
-        id:6,
-        titulo:"Remera Sublimada",
-        imagen:"./images/remera-1.jpg",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
-        categoria: {
-            id:"remeras", //Esto es para poder filtrar por categoria , con .categoria.id
-        }
-    },
-    {
-        id:7,
-        titulo:"Remera Sublimada",
-        imagen:"./images/remera-1.jpg",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
-        categoria: {
-            id:"remeras", //Esto es para poder filtrar por categoria , con .categoria.id
-        }
-    },
+let arrayProductos = [];
 
-]
+
+
+fetch("./productos.json")
+.then((res)=>res.json())
+.then((data)=>{
+    // console.log(data); Data trae el array de productos, los asigno a mi array vacio
+    arrayProductos = data;
+    cargarProductos(data);
+})
+
+
+
+
 
 const productosContainer = document.getElementById("todosLosProductosContainer");
 const botonesCategoria = document.querySelectorAll(".nav-link");
 const navLinkProductos = document.querySelector(".nav-link-productos");
-
+const todosLosProductos = document.getElementById("todos");
 
 
 function cargarProductos (productosElegidos) {
@@ -125,6 +73,8 @@ botonesCategoria.forEach((boton)=>{
 
 navLinkProductos.addEventListener("click",()=>{
     cargarProductos(arrayProductos);
+    todosLosProductos.classList.add("active");
+
 })
 
 
