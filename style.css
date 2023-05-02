@@ -197,7 +197,18 @@ footer{
     padding: 0.3em 0.5em;
     border-radius: 100%;
     cursor: pointer;
+    transition: 0.2s;
+    background-color: #fff;
+    color: var(--verdeOscuro);
+   
 }
+.footer-redes-container i:hover{
+    background-color: var(--verdeOscuro);
+    color: #fff;
+    border: 2px solid var(--verdeOscuro);
+}
+
+
 .footer-sections ul{
     display: flex;
     align-items: center;

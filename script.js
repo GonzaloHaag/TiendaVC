@@ -85,8 +85,8 @@ function cargarProductos (productosElegidos) {
         <div class="info-product">
         <h3 class="title-product">${producto.titulo}</h3>
     
-        <p class="description">${producto.descripcion}<button class="verMas" id="btn-verMas">...Ver Más</button></p>
-        <span class="hide" id="hideText">
+        <p class="description">${producto.descripcion}<button class="verMas">...Ver Más</button></p>
+        <span class="hide">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.
         </span>
         </div>
@@ -100,7 +100,7 @@ function cargarProductos (productosElegidos) {
     const btnVerMas = document.querySelectorAll(".verMas");
     const textVerMas = document.querySelectorAll(".hide");
 
-   
+
 
    
 
