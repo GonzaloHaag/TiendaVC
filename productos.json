@@ -2,7 +2,7 @@
     {
         "id":1,
         "titulo": "Remera Sublimada",
-        "imagen": "https://i.postimg.cc/FsWFtJJR/remera-1.webp",
+        "imagen": "https://i.postimg.cc/6p7g17XC/remera-1.webp",
         "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
         "categoria": {
             "id":"remeras"
@@ -12,7 +12,7 @@
     {
         "id":2,
         "titulo":"Remera Sublimada",
-        "imagen":"https://i.postimg.cc/DwSv7yqc/remera-2.webp",
+        "imagen":"https://i.postimg.cc/2SPMpzkM/remera-2.webp",
         "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
         "categoria": {
             "id":"remeras"
@@ -21,7 +21,7 @@
     {
         "id":3,
         "titulo":"Chomba Pique personalizada",
-        "imagen":"https://i.postimg.cc/fb6kGSpX/chomba-1.webp",
+        "imagen":"https://i.postimg.cc/HsS1ND71/chomba-1.webp",
         "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
         "categoria": {
             "id":"chombas"
@@ -30,7 +30,7 @@
     {
         "id":4,
         "titulo":"Chomba Pique personalizada",
-        "imagen":"https://i.postimg.cc/vm1c2tqb/chomba-2.webp",
+        "imagen":"https://i.postimg.cc/Z5Czt7rB/chomba-2.webp",
         "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
         "categoria": {
             "id":"chombas"
@@ -39,7 +39,7 @@
     {
         "id":5,
         "titulo":"Chombas Pique personalizadas",
-        "imagen":"https://i.postimg.cc/jS3DhFhM/chomba-3.webp",
+        "imagen":"https://i.postimg.cc/sDfRKDxJ/chomba-3.webp",
         "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
         "categoria": {
             "id":"chombas"
@@ -48,7 +48,7 @@
     {
         "id":6,
         "titulo":"Remera Sublimada",
-        "imagen":"https://i.postimg.cc/FsWFtJJR/remera-1.webp",
+        "imagen":"https://i.postimg.cc/6p7g17XC/remera-1.webp",
         "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
         "categoria": {
             "id":"remeras"
@@ -57,7 +57,7 @@
     {
         "id":7,
         "titulo":"Remera Sublimada",
-        "imagen":"https://i.postimg.cc/FsWFtJJR/remera-1.webp",
+        "imagen":"https://i.postimg.cc/2SPMpzkM/remera-2.webp",
         "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, voluptatem.",
         "categoria": {
             "id":"remeras" 
