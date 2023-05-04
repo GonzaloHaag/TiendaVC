@@ -2,7 +2,7 @@ let arrayProductos = [];
 
 
 
-fetch("./productos.json")
+fetch("../productos.json")
 .then((res)=>res.json())
 .then((data)=>{
     // console.log(data); Data trae el array de productos, los asigno a mi array vacio
@@ -18,7 +18,6 @@ const productosContainer = document.getElementById("todosLosProductosContainer")
 const botonesCategoria = document.querySelectorAll(".nav-link");
 const navLinkProductos = document.querySelector(".nav-link-productos");
 const todosLosProductos = document.getElementById("todos");
-
 
 function cargarProductos (productosElegidos) {
 
@@ -61,8 +60,9 @@ botonesCategoria.forEach((boton)=>{
         if(botonId != "todos") {
             const productosCategoria = arrayProductos.filter((producto) => producto.categoria.id === botonId);
             
+           
+            console.log(productosCategoria);
             cargarProductos(productosCategoria);
-        //    console.log(productosCategoria);
         }
         else{
             // console.log(arrayProductos);
@@ -71,10 +71,26 @@ botonesCategoria.forEach((boton)=>{
     })
 })
 
-navLinkProductos.addEventListener("click",()=>{
-    cargarProductos(arrayProductos);
-    todosLosProductos.classList.add("active");
+// navLinkProductos.addEventListener("click",()=>{
+//     cargarProductos(arrayProductos);
+//     todosLosProductos.classList.add("active");
 
+// })
+
+
+//ESTO DA EL PROBLEMA DE QUE NO FILTRA LOS PRODUCTOS
+const navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach((nav)=>{
+    nav.addEventListener("click",(e)=>{
+        
+        if(e.target.id === "productos") {
+        cargarProductos(arrayProductos);
+
+        }
+
+      
+        
+    })
 })
 
 
@@ -84,6 +100,14 @@ document.addEventListener("DOMContentLoaded",()=>{
     cargarProductos(arrayProductos)
   })
   
+
+//Probando scroll reveal
+window.sr = ScrollReveal();
+sr.reveal("#Productos",{delay:100,origin:'left',distance:'100px'});
+sr.reveal(".navbar",{delay:100,origin:'top',distance:'100px'});
+sr.reveal(".bordado-container");
+sr.reveal(".footer");
+
 
 
 
